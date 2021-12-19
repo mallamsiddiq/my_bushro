@@ -1,0 +1,10 @@
+Limitation : The API provided does not have enough information to tell or score the most purchased item. 
+This is the output from when I access the available columns with pandas: 
+	Index(['order_id', 'date_created', 'total_amount', 'status'], dtype='object') 
+Maybe the API had been edited prior to this test. Please kindly verify this. 
+
+Description: I did my rough rough work in the seed.py file.
+
+
+Note: this is a test app and hence subjected to fine tuning and correction on security and other advanced issues…
+

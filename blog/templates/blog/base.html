@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	table { font-family: Arial, Helvetica, sans-serif;border-collapse: collapse;width: 80%;margin: 20px }
+ td,  th { border: 1px solid transparent; padding: 8px;text-align: center;
+}
+h5,h3{text-align:center;}
+tr:nth-child(even){background-color: orange;}
+tr:first-child{background-color: red;}
+tr:hover {background-color: #ddd;}
+
+th { padding-top: 12px; padding-bottom: 12px;  background-color: rgba(100,100,10,0.5); color: white;margin: 2px }
+.flex-container {
+  display: flex;width: 100%;padding: 20px
+  background-color: red;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+    
+</style>
+<head>
+	<title>All Oders - SODIQ</title>
+</head>
+<body style="background-color: DodgerBlue;color:white;">
+
+	<h1 style="text-align: center;width: 100vw">	
+			Oders</h1>
+
+
+<div class="flex-container">
+
+
+<div style="width: 100%;padding: 20px;display: flex;justify-content: center;align-items: center;">
+<table id="orders">
+  <tr>
+  	<th><h4>ORDER ID</h4></th>
+    <th><h4>DATE CREATED</h4></th>
+    <th><h4>TOTAL AMOUNT</h4></th>
+    <th><h4>STATUS</h4></th>
+  </tr>
+  {% for data in data %}
+  <tr>
+    <td><h5>{{data.order_id}}</h5></td>
+    <td><h5>{{data.date_created}}</h5></td>
+    <td><h5>{{data.total_amount}}</h5></td>
+    <td><h5>{{data.status}}</h5></td>
+  </tr>
+  {% endfor %}
+</table>
+</div >
+</div>
+        
+
+</body>
+</html>
